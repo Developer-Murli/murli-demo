@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js8-demo</title>
+    <style>
+        .container{
+            height: 150px;
+            width: 50%;
+            /* background-color: rgba(89, 167, 167, 0.263); */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            height: 35px;
+            width: 150px;
+            padding: 10px;
+            font-size: small;
+            border-radius: 10px;
+            border: none;
+        }
+       #removeItems{
+        margin-left: 50px;
+        background-color: pink;
+       }
+       #addItems{
+        background-color: rgb(119, 244, 119);
+       }
+       #display{
+        color: rgb(0, 47, 255);
+        font-weight: 700;
+        font-size: 30px;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="addItems" onclick="addList()">Add to Wishlist</button>
+        <button id="removeItems" onclick="removeList()">Remove to Wishlist</button>
+       
+    </div>
+   <b> Your Listed Items is :</b> <span id="display" style="margin:30px"></span>
+  
+   <script>
+    var add=0;
+    function addList(){
+        var dis=document.getElementById("display");
+
+        add=add+1;
+        dis.innerHTML=add;
+    }
+    function removeList(){
+        
+        var remove=document.getElementById("display");
+        add=add-1;
+        remove.innerHTML=add;
+
+    }
+   </script>
+
+</body>
+</html>
